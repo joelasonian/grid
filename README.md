@@ -3,6 +3,8 @@ Grid
 
 The CSS Grid jQuery plugin applies Grid CSS to DOM elements based on the naming convention of [Grid - a minimal CSS Grid Utility](http://brajeshwar.com/2011/grid-a-minimal-css-grid-utility/) - By [Brajeshwar](http://brajeshwar.com/author/brajeshwar/).
 
+[Original Documentation for Grid jQuery Plugin](http://www.joelpeterson.com/blog/2011/10/the-css-grid-jquery-plugin/)
+
 Usage
 -----
 * Include the jquery.cssgrid.js plugin, along with jQuery
