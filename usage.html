@@ -1,0 +1,159 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The CSS Grid jQuery Plugin</title>
+<script src="libs/jquery-1.6.4.min.js"></script>
+<script src="jquery.cssgrid.js"></script>
+<script>
+$(document).ready(function() {
+	$.cssGrid($('.grids'));
+});
+</script>
+
+<style>
+/*Display styles*/
+
+.fluid{margin:0 auto;padding:0;	border:solid 1px #333333;}
+.fixed{width:800px;margin:0 auto;padding:0;	border:solid 1px #333333;}
+.grids div{height:50px;line-height:50px;text-align:center;}
+.FFE7B3{background: #FFE7B3;}
+.CAEAB5{background: #CAEAB5;}
+.D4F9F8 {background: #D4F9F8;}
+.F4CEF4 {background: #F4CEF4;}
+.F2F294 {background: #F2F294;}
+
+</style>
+
+</head>
+
+<body>
+<h1>CSS Grid jQuery plugin</h1>
+<h2>10/05/2011 v.01</h2>
+<ul>
+<li>The CSS Grid jQuery plugin applies <em>Grid CSS</em> to DOM elements based on the naming convention of <a href="http://brajeshwar.com/2011/grid-a-minimal-css-grid-utility/">Grid - a minimal CSS Grid Utility</a>.</li>
+<li>By: <a href="http://www.joelpeterson.com">www.joelpeterson.com</a>  |  <a href="http://twitter.com/joelasonian">@joelasonian</a></li>
+<li>Based on <a href="http://brajeshwar.com/2011/grid-a-minimal-css-grid-utility/">Grid - a minimal CSS Grid utility</a> - By <a href="http://brajeshwar.com/author/brajeshwar/">Brajeshwar</a></li>
+<li><a href="http://stefangabos.ro/jquery/jquery-plugin-boilerplate-oop/">Plugin Boilerplate by Stefan Gabos</a></li> 
+</ul>
+
+<h2>Usage</h2>
+<ul>
+    <li>Include the jquery.cssgrid.js plugin, along with jQuery</li>
+    <li>Add a class "grids" to the container of elements you would like to apply the Grid CSS styles.</li>
+    <li>Define your desired grid size by applying "gxofy" where "x" is the segment of the "y" whole.</li>    
+    <li>Invoke the plugin on document ready </li>
+</ul>
+<p>Example</p>
+<pre>
+$(document).ready(function() {
+	$.cssGrid($('.grids'));
+});
+</pre>
+<h2>Alternative String</h2>
+<p>By default the plugin looks for the starting character "g" and the string seperator "of".  These are customizable.</p>
+<p>Example:</p>
+<pre>
+$(document).ready(function() {
+	$.cssGrid($('.grids'), {
+		startString: 'g',
+		seperatorString: 'of'
+	});
+});
+</pre>
+<h2>Fluid layout examples</h2>
+<div class="fluid grids">
+<div class="g1of2 FFE7B3">1 of 2</div>
+<div class="g1of2 CAEAB5">1 of 2</div>
+</div>
+<div class="fluid grids">
+<div class="g1of3 D4F9F8">1 of 3</div>
+<div class="g2of3 F4CEF4">2 of 3</div>
+</div>
+<div class="fluid grids">
+<div class="g1of4 F2F294">1 of 4</div>
+<div class="g2of4 FFE7B3">2 of 4</div>
+<div class="g1of4 CAEAB5">1 of 4</div>
+</div>
+
+<h2>Fixed layout examples</h2>
+<div class="fixed grids">
+<div class="g1of2 FFE7B3">1 of 2</div>
+<div class="g1of2 CAEAB5">1 of 2</div>
+</div>
+<div class="fixed grids">
+<div class="g1of3 D4F9F8">1 of 3</div>
+<div class="g2of3 F4CEF4">2 of 3</div>
+</div>
+<div class="fixed grids">
+<div class="g1of4 F2F294">1 of 4</div>
+<div class="g2of4 FFE7B3">2 of 4</div>
+<div class="g1of4 CAEAB5">1 of 4</div>
+</div>
+
+<h2>Unorthodox segmentation</h2>
+<div class="fluid grids">
+<div class="g13of200 CAEAB5">13 of 200</div>
+<div class="g37of200 D4F9F8">37 of 200</div>
+<div class="g50of200 F4CEF4">50 of 200</div>
+<div class="g100of200 FFE7B3">100 of 200</div>
+</div>
+
+<h2> Fluid 12 Column Layout Grid System</h2>
+<div class="fluid grids">
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+<div class="g60of980 CAEAB5"></div>
+<div class="g20of980"></div>
+</div>
+
+<div class="fluid grids">
+<div class="g20of980"></div>
+<div class="g140of980 D4F9F8"></div>
+<div class="g20of980"></div>
+<div class="g140of980 D4F9F8"></div>
+<div class="g20of980"></div>
+<div class="g140of980 D4F9F8"></div>
+<div class="g20of980"></div>
+<div class="g140of980 D4F9F8"></div>
+<div class="g20of980"></div>
+<div class="g140of980 D4F9F8"></div>
+<div class="g20of980"></div>
+<div class="g140of980 D4F9F8"></div>
+<div class="g20of980"></div>
+</div>
+
+<div class="fluid grids">
+<div class="g20of980"></div>
+<div class="g300of980 F4CEF4"></div>
+<div class="g20of980"></div>
+<div class="g300of980 F4CEF4"></div>
+<div class="g20of980"></div>
+<div class="g300of980 F4CEF4"></div>
+<div class="g20of980"></div>
+</div>
+
+
+</body>
+</html>
